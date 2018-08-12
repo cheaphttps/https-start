@@ -6,7 +6,7 @@
 
 ## 为什么要用 HTTPS？
  
- 1. 小程序、APP Store 需要的 SSL 证书是个什么东西？
+ 1. [小程序、APP Store 需要的 SSL 证书是个什么东西？](./content/why-https.md)
  2. 为什么网页出现莫名其妙的广告？—— 使用 HTTPS 防止流量劫持
  3. 使用 SSL 商业证书与免费证书的区别
 
