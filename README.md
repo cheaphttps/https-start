@@ -19,9 +19,8 @@
 1. oneinstack 一键开启 HTTPS 与 letsencrypt
 2. nginx 使用证书部署 HTTPS 与 HSTS
 3. apache 使用证书部署 HTTPS 与 HSTS
-4. caddy 使用证书部署 HTTPS 与 HSTS 并实现 301 跳转
-5. caddy 自动申请 HTTPS 证书
-6. docker 容器化 下如何部署证书
+4. [caddy 使用证书部署 HTTPS 与 HSTS 并实现 301 跳转](example/caddy/README.md)
+5. docker 容器化 下如何部署证书
 
 
 ## 支持我们
