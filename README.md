@@ -1,6 +1,6 @@
 ## 支持我们
 
-![](https://ws1.sinaimg.cn/large/a3fc3b79ly1fu70e4lcw1j20by0byaak.jpg)
+![](https://ws1.sinaimg.cn/large/a3fc3b79gy1fu70jj4bjkj205k05kglu.jpg)
 
 您可以通过购买商业证书的方式支持我们，并获得技术支持，199人民币起（1折）
 
