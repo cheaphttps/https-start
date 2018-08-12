@@ -21,12 +21,12 @@
 3. apache 使用证书部署 HTTPS 与 HSTS
 4. caddy 使用证书部署 HTTPS 与 HSTS 并实现 301 跳转
 5. caddy 自动申请 HTTPS 证书
-6. docker 容器化，使用 openresty  自动申请证书。
+6. docker 容器化 下如何部署证书
 
 
 ## 支持我们
 
 ![](https://ws1.sinaimg.cn/large/a3fc3b79gy1fu70jj4bjkj205k05kglu.jpg)
 
-1. 您可以通过购买商业证书的方式支持我们，并获得技术支持，199 人民币起（1折/附带1万美金保险）。
-2. 我们也接受直接捐赠。
+1. 您可以通过购买商业证书的方式支持我们，199 人民币起（1折/附带1万美金保险）。
+2. 当然，您也可以直接捐赠。
