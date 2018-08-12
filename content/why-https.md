@@ -7,7 +7,7 @@
 
 小和尚问老和尚：ssl 为什么会让 http 安全？
 
-![](https://ws1.sinaimg.cn/thumbnail/a3fc3b79gy1fu71zsy0y4j225s15oaak.jpg)
+![](https://ws1.sinaimg.cn/mw690/a3fc3b79gy1fu71zsy0y4j225s15oaak.jpg)
 
 老和尚答道：譬如你我都有一个同样的密码，我发信给你时用这个密码加密，你收到我发的信，用这个密码解密，就能知道我信的内容，其他的闲杂人等，就算偷偷拿到了信，由于不知道这个密码，也只能望信兴叹，这个密码就叫做对称密码。
 
