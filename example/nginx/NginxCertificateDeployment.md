@@ -4,7 +4,7 @@
 将域名 www.domain.com 的证书文件www.domain.com.crt 、私钥文件www.domain.com.key保存到同一个目录，例如/usr/local/nginx/conf目录下。
 
 ### 第二步 ###
-更新Nginx根目录下 conf/nginx.conf 文件如下：
+更新 Nginx 根目录下 conf/nginx.conf 文件格式如下：
 
 ``` conf
 server {
@@ -83,9 +83,9 @@ server {
   listen 80;  
   server_name  domain.com;
   server_tokens off;
-location / {
-    rewrite ^/(.*)$ https://www.smsben.com/$1 permanent;
-    }
+  location / {
+  rewrite ^/(.*)$ https://www.smsben.com/$1 permanent;
+  }
 }
 
 ```
