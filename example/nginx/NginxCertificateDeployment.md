@@ -80,12 +80,12 @@ server {
 
 ##301重定向 不带www跳转至带www http跳转https 官方推荐方法
 server {
-  listen 80;  
-  server_name  domain.com;
-  server_tokens off;
-  location / {
-  rewrite ^/(.*)$ https://www.smsben.com/$1 permanent;
-  }
+    listen 80;  
+    server_name  domain.com;
+    server_tokens off;
+    location / {
+    rewrite ^/(.*)$ https://www.smsben.com/$1 permanent;
+    }
 }
 
 ```
