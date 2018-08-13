@@ -85,9 +85,8 @@ server {
   server_tokens off;
 location / {
     rewrite ^/(.*)$ https://www.smsben.com/$1 permanent;
+    }
 }
-}
-
 
 ```
 
