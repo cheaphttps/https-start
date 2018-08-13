@@ -41,51 +41,55 @@ server {
     ssl_prefer_server_ciphers on;
     ##日志存放路径
     access_log /home/wwwlogs/www.domain.com_nginx.log combined;
-
-    location / { 
-        ##反向代理HTTP1.1支持
-        proxy_http_version 1.1;
-        ## HSTS
-        add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
-        ## frame页面的地址只能为同源域名下的页面
-        add_header X-Frame-Options SAMEORIGIN;
-        ## 失效某些浏览器的内容类型探嗅
-        add_header X-Content-Type-Options nosniff;
-        ## 防止跨站脚本 Cross-site scripting (XSS)，目前已经被大多数浏览器支持#默认是激活的，如果被用户失效，可以使用这个配置激活。
-        add_header X-XSS-Protection "1; mode=block";
-        add_header X-Robots-Tag none; 
-        ##设置不使用缓存
-        add_header Cache-Control no-cache;
-    }
     
+    ##屏蔽非(GET|HEAD|POST|OPTIONS)类型请求，返回444状态码
+    if ($request_method !~ ^(GET|HEAD|POST|OPTIONS)$ ) {
+        return 444;
+    }
     ##将符合(gif|jpg|jpeg|png|bmp|swf|flv|mp4|ico)文件的等设定expries缓存参数，要求浏览器缓存。
     location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|flv|mp4|ico)$ {
         expires 30d; ##客户端缓存上述数据30天
         access_log off; ##禁止记录 access 日志
-
+    }
     ##将符合js,css文件的等设定expries缓存参数，要求浏览器缓存。
     location ~ .*\.(js|css)?$ {
         expires 7d; ##客户端缓存上述数据7天
         access_log off; ##禁止记录 access 日志
     }
 
+    location / { 
+    ##反向代理HTTP1.1支持
+    proxy_http_version 1.1;
+    ## HSTS
+    add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+    ## frame页面的地址只能为同源域名下的页面
+    add_header X-Frame-Options SAMEORIGIN;
+    ## 失效某些浏览器的内容类型探嗅
+    add_header X-Content-Type-Options nosniff;
+    ## 防止跨站脚本 Cross-site scripting (XSS)，目前已经被大多数浏览器支持#默认是激活的，如果被用户失效，可以使用这个配置激活。
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Robots-Tag none; 
+    ##设置不使用缓存
+    add_header Cache-Control no-cache;
+
+    index index.html index.htm index.php;
+    root /home/wwwroot/www.drixn.com;
+    }
+
 }
 
-##301重定向 不带www跳转至带www 官方推荐方法
+##301重定向 不带www跳转至带www http跳转https 官方推荐方法
 server {
   listen 80;  
   server_name  domain.com;
-  rewrite ^(.*)$ https://www.domain.com$1 permanent;
+  server_tokens off;
+location / {
+    rewrite ^/(.*)$ https://www.smsben.com/$1 permanent;
 }
+}
+
 
 ```
 
 ### 配置完成 ###
 配置完成后，先用 `nginx –t` 来测试下配置是否有误，正确无误的话，重启Nginx,就可以使用 `https` 来访问了。
-
-## 使用全站加密，http自动跳转https(可选) ##
-
-对于用户不知道网站可以进行https访问的情况下，让服务器自动把http的请求重定向到 https。</br>
-在服务器这边的话配置的话，可以在页面里加 js 脚本，也可以在后端程序里写重定向，当然也可以在 web 服务器来实现跳转。Nginx 是支持 rewrite 的（只要在编译的时候没有去掉 pcre ）</br>
-在 http 的 server 里增加 `rewrite ^(.*) https://$host$1 permanent;`</br>
-这样就可以实现80进来的请求，重定向为https了。</br>
