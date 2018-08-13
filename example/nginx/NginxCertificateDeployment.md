@@ -11,7 +11,7 @@ server {
     ##ssl端口号为443，开启 fastopen 和 reusepor t特性
     listen 443 ssl http2 fastopen=3 reuseport; 
     ##域名
-    server_name domain.com www.domain.com;
+    server_name www.domain.com;
     ##首页排序
     index index.html index.htm index.php;
     ##站点根目录，即网站程序存放目录 
@@ -27,8 +27,12 @@ server {
     ssl_certificate www.domain.com.crt;
     ##key
     ssl_certificate_key www.domain.com.key;
+    ##激活会话重续提高https性能
     ##session超时时间
-    ssl_session_timeout 5m;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_timeout 10m;
+    ssl_session_tickets on;
+
     ##允许的 SSL 协议
     ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
     ##加密套件，写法遵循openssl标准
@@ -39,12 +43,18 @@ server {
     access_log /home/wwwlogs/www.domain.com_nginx.log combined;
 
     location / { 
+        ##反向代理HTTP1.1支持
         proxy_http_version 1.1;
+        ## HSTS
         add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
-        add_header X-Frame-Options deny;
+        ## frame页面的地址只能为同源域名下的页面
+        add_header X-Frame-Options SAMEORIGIN;
+        ## 失效某些浏览器的内容类型探嗅
         add_header X-Content-Type-Options nosniff;
+        ## 防止跨站脚本 Cross-site scripting (XSS)，目前已经被大多数浏览器支持#默认是激活的，如果被用户失效，可以使用这个配置激活。
         add_header X-XSS-Protection "1; mode=block";
         add_header X-Robots-Tag none; 
+        ##设置不使用缓存
         add_header Cache-Control no-cache;
     }
     
@@ -58,12 +68,16 @@ server {
         expires 7d; ##客户端缓存上述数据7天
         access_log off; ##禁止记录 access 日志
     }
-    ## 301重定向 不带www跳转至带www
-    if ($host != "smsben.com") {
-        rewrite ^/(.*)$ https://www.smsben.com/$1 permanent;
-    }
 
 }
+
+##301重定向 不带www跳转至带www 官方推荐方法
+server {
+  listen 80;  
+  server_name  domain.com;
+  rewrite ^(.*)$ https://www.domain.com$1 permanent;
+}
+
 ```
 
 ### 配置完成 ###
