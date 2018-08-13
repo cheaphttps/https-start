@@ -17,7 +17,7 @@
 ## 相关配置
 
 1. oneinstack 一键开启 HTTPS 与 letsencrypt
-2. nginx 使用证书部署 HTTPS 与 HSTS
+2. [nginx 使用证书部署 HTTPS 与 HSTS](example/nginx/NginxCertificateDeployment.md)
 3. apache 使用证书部署 HTTPS 与 HSTS
 4. [caddy 使用证书部署 HTTPS 与 HSTS 并实现 301 跳转](example/caddy/README.md)
 5. docker 容器化 下如何部署证书
