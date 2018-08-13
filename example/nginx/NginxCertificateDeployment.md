@@ -58,7 +58,7 @@ server {
         expires 7d; ##客户端缓存上述数据7天
         access_log off; ##禁止记录 access 日志
     }
-
+    ## 301重定向 不带 www 跳转至带 www
     if ($host != "smsben.com") {
         rewrite ^/(.*)$ https://www.smsben.com/$1 permanent;
     }
