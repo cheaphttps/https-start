@@ -47,4 +47,7 @@
 
 大到运营商，路由器厂商，甚至浏览器，杀毒软件... 都有存在流量劫持的行为，HTTPS 是网页唯一的救命稻草。
 
+## 如何部署 HTTPS ？
+
+请从 [https-start](https://github.com/cheaphttps/https-start) 获取各大 HTTP 服务器的配置文件和部署说明。
 
