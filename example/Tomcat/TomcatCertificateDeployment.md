@@ -1,16 +1,7 @@
----
-title: Tomcat 证书部署
-date: 2017-03-10 14:15:18
-categories:
-- SSL证书
-- 证书安装
-tags:
-- SSL
-- HTTPS
-- Tomcat
----
+## Tomcat 证书部署
+
 ## 证书安装 ##
-<!--more-->
+
 ### 第一步 ###
 配置SSL连接器，将www.domain.com.jks文件存放到conf目录下，使用编辑器或者 vi 打开 tomcat 安装目录/conf/server.xml  ,添加一个 Connector：
 ```

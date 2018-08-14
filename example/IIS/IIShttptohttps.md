@@ -6,13 +6,13 @@
 [官网链接](https://www.iis.net/downloads/microsoft/url-rewrite)
 
 ## 下载URL 重写模块 2.1
-### English 下载
-[点击下载WebPI](http://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&amp;appid=urlrewrite2) 
-[点击下载x86](http://download.microsoft.com/download/6/8/F/68F82751-0644-49CD-934C-B52DF91765D1/rewrite_x86_en-US.msi) 
+### 英文版下载
+[点击下载WebPI](http://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&amp;appid=urlrewrite2) </br>
+[点击下载x86](http://download.microsoft.com/download/6/8/F/68F82751-0644-49CD-934C-B52DF91765D1/rewrite_x86_en-US.msi) </br>
 [点击下载x64](http://download.microsoft.com/download/D/D/E/DDE57C26-C62C-4C59-A1BB-31D58B36ADA2/rewrite_amd64_en-US.msi)
 
-### 简体中文下载 
-[点击下载x86](http://download.microsoft.com/download/C/1/4/C144048E-BB10-4D0A-8EB2-477319F78DC2/rewrite_x86_zh-CN.msi)
+### 中文版下载 
+[点击下载x86](http://download.microsoft.com/download/C/1/4/C144048E-BB10-4D0A-8EB2-477319F78DC2/rewrite_x86_zh-CN.msi)</br>
 [点击下载x64](http://download.microsoft.com/download/E/A/9/EA9F19BC-0EEB-49C9-B32D-56852BBE56DA/rewrite_amd64_zh-CN.msi)
 
 ## ASP.NET站点
