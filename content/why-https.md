@@ -86,4 +86,4 @@ ssl使用对称密码对http内容进行加解密，所以让http安全了，常
 
 ## 如何部署 HTTPS ？
 
-请访问我们开源项目： [https-start](https://github.com/cheaphttps/https-start) 获取对应平台的配置文件。
+[https-start](https://github.com/cheaphttps/https-start) 获取各大 HTTP 服务器的配置文件和说明。
