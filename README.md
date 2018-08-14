@@ -19,8 +19,8 @@
 
 
 1. [nginx 使用证书部署 HTTPS 与 HSTS](example/nginx/NginxCertificateDeployment.md)
-2. apache 使用证书部署 HTTPS 与 HSTS
-3. IIS 使用证书部署 HTTPS
+2. [apache 使用证书部署 HTTPS](example/Apache/Apache2-xCertificateDeployment.md)
+3. [IIS 使用证书部署 HTTPS](example/IIS/IIS7SSL.md)
 4. [caddy 使用证书部署 HTTPS 与 HSTS 并实现 301 跳转](example/caddy/README.md)
 5. docker 容器化 下如何部署证书
 6. oneinstack 一键开启 HTTPS 与 letsencrypt
