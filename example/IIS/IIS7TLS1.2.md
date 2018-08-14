@@ -3,11 +3,13 @@
 ## 第一步
 ### 源站下载
 点击下面链接下载 `IISCrypto`
-<div class="Download"><ul class="repo"><li class="repo-download"><a href="https://www.nartac.com/Downloads/IISCrypto/IISCrypto.exe" target="_blank" title="Download" data-action="download"><i class="icon icon-download"></i> IIS Crypto GUI </a></li><li class="repo-download"><a href="https://www.nartac.com/Downloads/IISCrypto/IISCryptoCli.exe" target="_blank" title="Download" data-action="download"><i class="icon icon-download"></i> IIS Crypto CLI </a></li></ul></div>
+[IIS Crypto GUI](https://www.nartac.com/Downloads/IISCrypto/IISCrypto.exe)
+[IIS Crypto CLI](href="https://www.nartac.com/Downloads/IISCrypto/IISCryptoCli.exe)
 
 ### 本地下载
 点击下面链接下载 `IISCrypto`
-<div class="Download"><ul class="repo"><li class="repo-download"><a href="https://files.drixn.com/IIS/IISCrypto.exe" target="_blank" title="Download" data-action="download"><i class="icon icon-download"></i> IIS Crypto GUI </a></li><li class="repo-download"><a href="https://files.drixn.com/IIS/IISCryptoCli.exe" target="_blank" title="Download" data-action="download"><i class="icon icon-download"></i> IIS Crypto CLI </a></li></ul></div>
+[IIS Crypto GUI](https://files.drixn.com/IIS/IISCrypto.exe)
+[IIS Crypto CLI](https://files.drixn.com/IIS/IISCryptoCli.exe)
 
 将下载好的 `IISCrypto` 放在桌面待用
 ## 第二步

@@ -2,7 +2,6 @@
 
 ## 第一步
 打开`服务器证书模块`
-
 ![图3](https://cdn.drixn.com/img/src/IIS00018.png)
 
 ## 第二步
