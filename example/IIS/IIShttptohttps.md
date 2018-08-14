@@ -35,7 +35,7 @@
 
 ## IIS配置步骤
 打开所需要配置的站点
-<center>![图3](https://cdn.drixn.com/img/src/IIS0000.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0000.png)
 
 ### 第一步
 打开`SSL 设置`
