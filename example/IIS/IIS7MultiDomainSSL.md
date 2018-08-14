@@ -2,7 +2,6 @@
 
 ## 第一步
 先点击需要开启SSL的站点，然后点击`绑定`,然后,点击`添加`
-<!--more-->
 
 `类型` 选择 `https`
 
@@ -13,7 +12,7 @@
 然后点击 `确定`
 
 一共添加两次，第二次端口号和第一次不一样就可以，因为分带 `www` 和 `不带www` 的站点
-<center>![图1](https://cdn.drixn.com/img/src/IIS7M000.png)</center>
+![图1](https://cdn.drixn.com/img/src/IIS7M000.png)
 
 ## 第二步
 打开文件 `C:\Windows\system32\inetsrv\config\applicationHost.config`
@@ -38,7 +37,7 @@
 <binding protocol="https" bindingInformation="*:443:mydomain4.com" />
 ```
 如下图格式：
-<center>![图1](https://cdn.drixn.com/img/src/IIS7M001.png)</center>
+![图1](https://cdn.drixn.com/img/src/IIS7M001.png)
 
 ## 第三步
 完成上述步骤后，重启每个站点即可(切记不是重启服务器)

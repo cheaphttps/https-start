@@ -1,4 +1,3 @@
-
 ## IIS7 http重定向到https
 
 <div class="admonition note"><p class="admonition-title">准备工作</p><p>SSL证书购买
@@ -44,48 +43,48 @@
 ### 第二步
 安装URL重写模块2.0，安装完毕之后重启IIS服务，之后打开IIS控制台，发现多了下图`URL 重写`组件
 
-<center>![图3](https://cdn.drixn.com/img/src/IIS0001.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0001.png)
 
 ### 第三步
 双击`URL 重写`，点击右方菜单栏`添加规则`
-<center>![图3](https://cdn.drixn.com/img/src/IIS0002.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0002.png)
 
 ### 第四步
 在弹出的界面点击`空白规则`
-<center>![图3](https://cdn.drixn.com/img/src/IIS0003.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0003.png)
 
 ### 第五步
 <div class="admonition warning"><p class="admonition-title">编辑入站规则</p><p>名称：`HTTP to HTTPS redirect`</p><p>模式：`(.*)`</p></div>
-<center>![图3](https://cdn.drixn.com/img/src/IIS0004.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0004.png)
 
 ### 第六步
 点击条件菜单后边的倒三角
-<center>![图3](https://cdn.drixn.com/img/src/IIS0005.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0005.png)
 
 ### 第七步
 在弹出的界面点击`添加`
-<center>![图3](https://cdn.drixn.com/img/src/IIS0006.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0006.png)
 
 ### 第八步
 <div class="admonition warning"><p class="admonition-title">添加条件界</p><p>条件输入：`{HTTP}`</p><p>模式：`^OFF$` 或 `off`</p></div>
-<center>![图3](https://cdn.drixn.com/img/src/IIS0004.png)</center>
-<center>![图3](https://cdn.drixn.com/img/src/IIS0007.png)</center>
-<center>或</center>
-<center>![图3](https://cdn.drixn.com/img/src/IIS0011.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0004.png)
+![图3](https://cdn.drixn.com/img/src/IIS0007.png)
+或
+![图3](https://cdn.drixn.com/img/src/IIS0011.png)
 
 ### 第九步
 <div class="admonition warning"><p class="admonition-title">编辑`操作类型`和`重定向URL`以及`重定向类型`</p><p>操作类型：`重定向`</p><p>重定向URL：`https://{HTTP_HOST}/{R:1}`</p><p>重定向类型：`参阅其它(303)` 或 `已找到(302)`</p></div>
-<center>![图3](https://cdn.drixn.com/img/src/IIS0008.png)</center>
-<center>或</center>
-<center>![图3](https://cdn.drixn.com/img/src/IIS0010.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0008.png)
+或
+![图3](https://cdn.drixn.com/img/src/IIS0010.png)
 
 
 ### 第十步
 点击右侧菜单栏`应用`
-<center>![图3](https://cdn.drixn.com/img/src/IIS0009.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0009.png)
 
 ### 第十一步
 查看规则
-<center>![图3](https://cdn.drixn.com/img/src/IIS0012.png)</center>
+![图3](https://cdn.drixn.com/img/src/IIS0012.png)
 
 ### 操作完成
