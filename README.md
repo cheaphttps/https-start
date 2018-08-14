@@ -12,15 +12,18 @@
 1. 对抗流量劫持，HTTPS 的终极必杀技 —— HSTS
 2. 加速网站访问 —— HTTP2 、BBR 加速 与 deflate 压缩
 3. 更快更适合手机的 ECDSA 算法
+4. CAA 记录是什么？ 如何添加 CAA 记录
 
 
 ## 相关配置
 
-1. oneinstack 一键开启 HTTPS 与 letsencrypt
-2. [nginx 使用证书部署 HTTPS 与 HSTS](example/nginx/NginxCertificateDeployment.md)
-3. apache 使用证书部署 HTTPS 与 HSTS
+
+1. [nginx 使用证书部署 HTTPS 与 HSTS](example/nginx/NginxCertificateDeployment.md)
+2. apache 使用证书部署 HTTPS 与 HSTS
+3. IIS 使用证书部署 HTTPS
 4. [caddy 使用证书部署 HTTPS 与 HSTS 并实现 301 跳转](example/caddy/README.md)
 5. docker 容器化 下如何部署证书
+6. oneinstack 一键开启 HTTPS 与 letsencrypt
 
 
 ## 支持我们
