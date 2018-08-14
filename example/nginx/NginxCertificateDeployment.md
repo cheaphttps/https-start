@@ -1,4 +1,4 @@
-## nginx 证书安装 ##
+## nginx 证书安装并启用HSTS ##
 
 ### 第一步 ###
 将域名 www.domain.com 的证书文件www.domain.com.crt 、私钥文件www.domain.com.key保存到同一个目录，例如/usr/local/nginx/conf目录下。
@@ -89,6 +89,8 @@ server {
 }
 
 ```
+
+
 
 ### 配置完成 ###
 配置完成后，先用 `nginx –t` 来测试下配置是否有误，正确无误的话，重启Nginx,就可以使用 `https` 来访问了。
