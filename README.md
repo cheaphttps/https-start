@@ -14,8 +14,10 @@
 2. 加速网站访问 —— HTTP2 、BBR 加速 与 deflate 压缩
 3. 更快更适合手机的 ECDSA 算法
 4. CAA 记录是什么？ 如何添加 CAA 记录
-5. (如何配置HTTPS公钥扎钉HPKP)[./content/HPKP.md]
-6. (服务器开启TLS1.3)[./content/Enable_TLS_1_3.md]
+5. [如何配置HTTPS公钥扎钉 HPKP](./content/HPKP.md)
+6. [服务器开启TLS1.3](./content/Enable_TLS_1_3.md)
+7. [IIS7.5如何安装多域名SSL证书](./content/IIS7MultiDomainSSL.md)
+8. [IIS7.5如何开启TSL1.2](./content/IIS7TLS1.2.md)
 
 
 ## 相关配置
